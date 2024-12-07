@@ -10,7 +10,7 @@ This can be downloaded from the [Node.js official website](https://nodejs.org/en
 
 You can verify that node has been successfully installed by running the following:
 
-```
+```sh
 node -v
 npm -v
 ```
@@ -24,7 +24,7 @@ _Note: It's recommended to use the GUI installer rather than the command line in
 
 Verify that the installation has been successfull by running the following:
 
-```
+```sh
 which aws
 aws --version
 ```
@@ -37,7 +37,7 @@ Before you can programmatically deploy / remove resources from a given AWS accou
 
 Once you've obtained a set of temporary security credentials, you can set these as environment variables using the following commands:
 
-```
+```sh
 export AWS_ACCESS_KEY_ID=TemporaryAccessKeyId
 export AWS_SECRET_ACCESS_KEY=TemporarySecretAccessKey
 export AWS_SESSION_TOKEN=TemporarySessionToken
@@ -47,7 +47,7 @@ export AWS_SESSION_TOKEN=TemporarySessionToken
 
 You can then verify that your credentials are set properly by running the following:
 
-```
+```sh
 aws s3 ls
 ```
 
@@ -58,13 +58,13 @@ You should also have access to the AWS Management console. Please check with the
 ## Install AWS CDK
 You can install thr AWS CDK CLI globally using npm:
 
-```
+```sh
 npm install -g aws-cdk
 ```
 
 Verify the installation by running:
 
-```
+```sh
 cdk --version
 ```
 
@@ -73,7 +73,7 @@ We'll initialise our repo within its own directory (as you can't `cdk init` with
 
 From the project root, create a directory with the following naming format:
 
-```
+```sh
 mkdir [your-name]-workshop
 ```
 
