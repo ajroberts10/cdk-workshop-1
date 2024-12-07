@@ -87,3 +87,5 @@ _Obviously replacing [your-name] with your own name..._
 - [ ] Created Project Directory
 
 Congrats 🍾 You're all set up to begin the workshop.
+
+Go to [task 1](001-task-1.md)
