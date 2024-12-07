@@ -88,4 +88,4 @@ _Obviously replacing [your-name] with your own name..._
 
 Congrats 🍾 You're all set up to begin the workshop.
 
-Go to [task 1](001-task-1.md)
+Go to [Task 1](001-task-1.md)
