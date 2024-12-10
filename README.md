@@ -42,4 +42,9 @@ The Book Shop API:
 
 ![Book shop API diagram](./images/bookshop-api.png)
 
+## Tasks
+0. [Setup](./tasks/000-setup.md)
+1. [Task 1 - Initialising our repo](./tasks/001-task-1.md)
+2. [Task 2 - Creating a Lambda function](./tasks/002-task-2.md)
+
 Let's get going! 🚀
