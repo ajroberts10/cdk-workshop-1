@@ -46,6 +46,7 @@ The Book Shop API:
 0. [Setup](./tasks/000-setup.md)
 1. [Task 1 - Initialising our repo](./tasks/001-task-1.md)
 2. [Task 2 - Creating a Lambda function](./tasks/002-task-2.md)
-2. [Task 2 - Testing our stack](./tasks/003-task-3.md)
+3. [Task 3 - Testing our stack](./tasks/003-task-3.md)
+4. [Task 4 - Adding an API Gateway Route](./tasks/004-task-4.md)
 
 Let's get going! 🚀
