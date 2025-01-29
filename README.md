@@ -48,5 +48,6 @@ The Book Shop API:
 2. [Task 2 - Creating a Lambda function](./tasks/002-task-2.md)
 3. [Task 3 - Testing our stack](./tasks/003-task-3.md)
 4. [Task 4 - Adding an API Gateway Route](./tasks/004-task-4.md)
+5. [Task 5 - Securing our API](./tasks/005-task-5.md)
 
 Let's get going! 🚀
