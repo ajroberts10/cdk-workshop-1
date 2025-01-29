@@ -22,7 +22,32 @@ class AdamWorkshopStack extends Stack {
 
     // Create the /authors route and connect it to our Authors Lambda function
     const authors = api.root.addResource("authors");
-    authors.addMethod("GET", new apigateway.LambdaIntegration(authorsFunction));
+    authors.addMethod(
+      "GET",
+      new apigateway.LambdaIntegration(authorsFunction),
+      {
+        apiKeyRequired: true,
+        authorizationType: apigateway.AuthorizationType.NONE,
+      }
+    );
+
+    const apiKey = new apigateway.ApiKey(this, "AdamApiKey", {
+      apiKeyName: "AdamApiKey",
+      description: "API Key for My Bookshop Service",
+    });
+
+    // Create a Usage Plan and associate it with the API Key
+    const usagePlan = new apigateway.UsagePlan(this, "AdamUsagePlan", {
+      name: "Basic",
+      apiStages: [
+        {
+          api,
+          stage: api.deploymentStage,
+        },
+      ],
+    });
+
+    usagePlan.addApiKey(apiKey);
   }
 }
 
