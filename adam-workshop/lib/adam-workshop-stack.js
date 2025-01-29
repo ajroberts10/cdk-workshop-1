@@ -7,10 +7,10 @@ class AdamWorkshopStack extends Stack {
     super(scope, id, props);
 
     // Define the Authors Lambda function resource
-    const authorsFunction = new lambda.Function(this, "AdamAuthorsFunction", {
+    const authorsFunction = new lambda.Function(this, "AuthorsFunction", {
       runtime: lambda.Runtime.NODEJS_20_X,
       code: lambda.Code.fromAsset("lambda"),
-      functionName: "AdamAuthorsFunction",
+      functionName: "AuthorsFunction",
       handler: "authors.handler",
     });
 
