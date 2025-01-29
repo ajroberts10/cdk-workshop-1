@@ -6,12 +6,20 @@ class AdamWorkshopStack extends Stack {
   constructor(scope, id, props) {
     super(scope, id, props);
 
-    // Define the Lambda function resource
-    const authorsFunction = new lambda.Function(this, "AuthorsFunction", {
+    // Define the Authors Lambda function resource
+    const authorsFunction = new lambda.Function(this, "AdamAuthorsFunction", {
       runtime: lambda.Runtime.NODEJS_20_X,
       code: lambda.Code.fromAsset("lambda"),
       functionName: "AdamAuthorsFunction",
       handler: "authors.handler",
+    });
+
+    // Define the Books Lambda function resource
+    const booksFunction = new lambda.Function(this, "AdamBooksFunction", {
+      runtime: lambda.Runtime.NODEJS_20_X,
+      code: lambda.Code.fromAsset("lambda"),
+      functionName: "AdamBooksFunction",
+      handler: "books.handler",
     });
 
     // Create the API Gateway
@@ -30,6 +38,13 @@ class AdamWorkshopStack extends Stack {
         authorizationType: apigateway.AuthorizationType.NONE,
       }
     );
+
+    // Create the /books route and connect it to our Books Lambda function
+    const books = api.root.addResource("books");
+    books.addMethod("GET", new apigateway.LambdaIntegration(booksFunction), {
+      apiKeyRequired: true,
+      authorizationType: apigateway.AuthorizationType.NONE,
+    });
 
     const apiKey = new apigateway.ApiKey(this, "AdamApiKey", {
       apiKeyName: "AdamApiKey",
