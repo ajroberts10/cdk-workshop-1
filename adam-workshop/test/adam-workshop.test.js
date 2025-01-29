@@ -29,10 +29,24 @@ test("API Gateway Created with /authors Route and Lambda Integration", () => {
   // Check that the GET method for /authors is using Lambda integration
   template.hasResourceProperties("AWS::ApiGateway::Method", {
     AuthorizationType: "NONE",
+    ApiKeyRequired: true,
     HttpMethod: "GET",
     Integration: {
       IntegrationHttpMethod: "POST",
       Type: "AWS_PROXY", // AWS_PROXY is the integration type for Lambda functions
     },
+  });
+});
+
+test("API Key Created", () => {
+  const app = new cdk.App();
+
+  const stack = new AdamWorkshop.AdamWorkshopStack(app, "MyTestStack");
+
+  const template = Template.fromStack(stack);
+
+  // Assert that an API Key resource has been created
+  template.hasResourceProperties("AWS::ApiGateway::ApiKey", {
+    Name: "AdamApiKey",
   });
 });
