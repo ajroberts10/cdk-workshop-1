@@ -49,6 +49,6 @@ The Book Shop API:
 3. [Task 3 - Testing our stack](./tasks/003-task-3.md)
 4. [Task 4 - Adding an API Gateway Route](./tasks/004-task-4.md)
 5. [Task 5 - Securing our API](./tasks/005-task-5.md)
-6. [Task 6 - Adding the Books endpoint](./tasks/006-task-6.md)
+6. [Task 6 - Adding a Books route](./tasks/006-task-6.md)
 
 Let's get going! 🚀
