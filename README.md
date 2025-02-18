@@ -1,6 +1,7 @@
 # CDK Workshop 1
 Welcome to the CDK Workshop! In this session, we’ll learn how to use the AWS Cloud Development Kit (CDK) to design, implement, and deploy a serverless API for a fictional book shop, featuring routes for managing authors and books.
 
+[CDK Intro Slides](./images/cdk_intro.pdf)
 
 ## Workshop Objectives
 By the end of this workshop, you will:
