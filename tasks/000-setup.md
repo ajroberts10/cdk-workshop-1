@@ -55,6 +55,11 @@ This should list all S3 buckets within the account.
 
 You should also have access to the AWS Management console. Please check with the workshop facilitator for the correct link and login details.
 
+### ℹ️ If you'd like to do this in your own time
+If you'd like to run this workshop in your own time, you will need to have access to (or create) your own AWS developer account. From here, you can configure your AWS CLI to use your own credentials. For this, it's probably best following the guide that AWS provide, as there are several different methods to authenticate.
+
+[Setting up new configuration and credentials](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html#getting-started-quickstart-new)
+
 ## Install AWS CDK
 You can install thr AWS CDK CLI globally using npm:
 
