@@ -3,7 +3,7 @@ Before we can begin the workshop, we need to make sure we have the appropriate t
 
 The following steps should get us ready to go!
 
-## Install Node.js
+## 0.1 - Install Node.js
 AWS CDK requires Node.js.
 
 This can be downloaded from the [Node.js official website](https://nodejs.org/en/download/package-manager)
@@ -15,7 +15,7 @@ node -v
 npm -v
 ```
 
-## Install the AWS CLI
+## 0.2 - Install the AWS CLI
 We'll use the AWS CLI to configure our AWS access. It's also useful for listing resources within a given AWS account.
 
 This can be installed from the [AWS Website](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
@@ -29,7 +29,7 @@ which aws
 aws --version
 ```
 
-## Configure AWS Account Access
+## 0.3 - Configure AWS Account Access
 
 Before you can programmatically deploy / remove resources from a given AWS account, you need to set up CLI access.
 
@@ -60,7 +60,7 @@ If you'd like to run this workshop in your own time, you will need to have acces
 
 [Setting up new configuration and credentials](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html#getting-started-quickstart-new)
 
-## Install AWS CDK
+## 0.4 - Install AWS CDK
 You can install thr AWS CDK CLI globally using npm:
 
 ```sh
@@ -73,7 +73,7 @@ Verify the installation by running:
 cdk --version
 ```
 
-## Create your project directory
+## 0.5 - Create your project directory
 We'll initialise our repo within its own directory (as you can't `cdk init` within a non-empty directory).
 
 From the project root, create a directory with the following naming format:
